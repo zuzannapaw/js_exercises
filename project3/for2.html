@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<script>
+	
+	let size = 10;
+	let orderElement = 1;
+		const button = document.createElement('button');
+		button.textContent = "Click me!";
+		const ul = document.createElement('ul');
+		
+		
+		const init = () => {
+			document.body.appendChild(button);
+		 
+			document.body.appendChild(ul);
+		}
+
+		init()
+		
+		const createElements = () => {
+			
+			for (let i=0; i<10 ;i++){
+			let li= document.createElement('li');	ul.appendChild(li);
+		}
+			let liList = document.querySelectorAll('li');
+			
+			let number=1;
+			
+			liList.forEach(function(li){
+					li.textContent = "element nr" + number;
+					number++;
+				li.style.fontSize = size + "px";
+				size++
+				
+			})
+			
+			
+//		for(let i =0;i<10;i++){
+//			orderElement=1
+//		}
+//			orderElement++
+//			
+//			if(orderElement>10){
+//				size++
+//			}
+	}
+		
+		
+		
+			
+	
+		 button.addEventListener("click",createElements);
+		
+		
+
+		
+	</script>
+</body>
+</html>
